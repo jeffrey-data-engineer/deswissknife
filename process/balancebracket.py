@@ -1,11 +1,3 @@
-def shiftright(s):
-    l=s.find(')')
-    if l>-1:
-        r=s.find('(',l)
-        if r>-1:
-            return ''.join([s[0:l],s[r],s[l+1:r],s[l],s[r+1:]])
-
-
 def balance_bracket(n):
     # Your code here!
     s="()"*n
@@ -16,7 +8,13 @@ def balance_bracket(n):
         return r
     else:
         r.append(s)
-        while s!=e:
-            s=shiftright(s)
-            r.append(s)
+        s=list(s)
+        e=list(e)
+        while s.index(')')<n:
+            for j in range(s.index(')'),n*2-1):
+                if s[j]!=s[j+1]:
+                    s[j],s[j+1]=s[j+1],s[j]
+                    r.append(''.join(s))
         return r
+
+print(balance_bracket(3))
