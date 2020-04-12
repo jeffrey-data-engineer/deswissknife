@@ -8,3 +8,8 @@ class Solution(object):
         while x<N:
             x = 2*x+1
         return x-N
+
+if __name__ == '__main__':
+    print("hi")
+    a = Solution()
+    print(a.bitwiseComplement(6))

@@ -1,7 +1,7 @@
-import testapp
+import process.bitwisecomplement as bp
 
 if __name__ == '__main__':
     #app.run()
     print("hi")
-    a = testapp.Solution()
+    a = bp.Solution()
     print(a.bitwiseComplement(6))
