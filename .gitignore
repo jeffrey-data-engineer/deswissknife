@@ -1,0 +1,4 @@
+__pychche__
+.cache/
+process/__pycache__/
+test/__pycache__/
