@@ -1,12 +1,13 @@
-import sys
+import pyperclip as clp
+
+def convert_to_row(raw):
+    lst = raw.split()
+    return ','.join(lst)
+
 
 if __name__ == '__main__':
-    l = []
-    for i in sys.stdin:
-        n = i.rstrip()
-        if n == 'exit':
-            break
-        else:
-            l.append(n)
-    print(l)
+    t = clp.paste()
+    output = convert_to_row(t)
+    print(output)
+    clp.copy(output)
 

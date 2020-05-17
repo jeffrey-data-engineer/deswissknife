@@ -1,10 +1,16 @@
-import os
+#clipboard event
+import time
 import sys
+import os
+sys.path.append(os.path.abspath("SO_site-packages"))
+
+import pyperclip
 
 if __name__ == '__main__':
-    if len(sys.argv) == 2:
-        directory = sys.argv[1]
-        for root, dirs, files in os.walk(directory):
-            for file in files:
-                if file.endswith(".py"):
-                    print(os.path.join(root, file))
+    recent_value = ""
+    while True:
+        tmp_value = pyperclip.paste()
+        if tmp_value != recent_value:
+            recent_value = tmp_value
+            print(recent_value)
+        time.sleep(0.1)
