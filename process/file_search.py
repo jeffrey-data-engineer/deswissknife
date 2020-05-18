@@ -8,9 +8,12 @@ import pyperclip
 
 if __name__ == '__main__':
     recent_value = ""
-    while True:
-        tmp_value = pyperclip.paste()
-        if tmp_value != recent_value:
-            recent_value = tmp_value
-            print(recent_value)
-        time.sleep(0.1)
+    with open('../data/mark.txt','w') as f:
+        while True:
+            tmp_value = pyperclip.paste()
+            if tmp_value != recent_value:
+                recent_value = tmp_value
+                print(recent_value)
+                f.write(recent_value)
+                f.flush()
+            time.sleep(0.1)
