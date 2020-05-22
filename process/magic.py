@@ -1,4 +1,5 @@
 import pyperclip as clp
+import time
 
 def convert_to_row(raw):
     lst = raw.split()
@@ -11,7 +12,9 @@ if __name__ == '__main__':
     while True:
         tmp_value = clp.paste()
         if tmp_value != recent_value:
+
             output = convert_to_row(tmp_value)
+
             recent_value = output
             clp.copy(output)
         time.sleep(0.1)
