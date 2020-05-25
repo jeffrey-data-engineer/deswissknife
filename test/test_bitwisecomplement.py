@@ -1,4 +1,4 @@
-from deswissknife.process.bitwisecomplement import Solution
+from deswissknife.process.f_num import Solution
 
 def test_bitwisecomplement():
     a = 19

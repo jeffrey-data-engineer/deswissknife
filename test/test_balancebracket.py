@@ -1,4 +1,4 @@
-from deswissknife.process.balancebracket import balance_bracket
+from deswissknife.resource import balance_bracket
 
 def test_balancedbracket():
     for n,exp in [ [0, [""]],

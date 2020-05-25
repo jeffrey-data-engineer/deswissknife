@@ -4,7 +4,7 @@ import threading
 import pyperclip
 
 def is_url_but_not_bitly(url):
-    if url.startswith("http://") and not "bit.ly" in url:
+    if url.startswith("https://") and not "bit.ly" in url:
         return True
     return False
 
