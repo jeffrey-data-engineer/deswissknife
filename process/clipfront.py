@@ -12,12 +12,13 @@ if __name__ == '__main__':
         mod = import_module(p)
         transform = getattr(mod, m)
         tmp_value = clp.paste()
+        print("from value: %s" %tmp_value)
         if len(sys.argv) > 2:
             para = sys.argv[2]
             output = transform(tmp_value, para)
         else:
             output = transform(tmp_value)
         clp.copy(output)
-        print(output)
+        print("to value: %s" %output)
     else:
         print("Usage: clipback.py <module_name>.<function_name>")

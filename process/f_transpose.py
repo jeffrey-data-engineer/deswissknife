@@ -4,4 +4,10 @@ def to_row(raw):
 
 def to_column(raw):
     lst = raw.split(',')
-    return '\n'.join(lst)
+    return '\r\n'.join(lst)
+
+def transpose(raw):
+    if('\r\n' in raw):
+        return to_row(raw)
+    else:
+        return to_column(raw)

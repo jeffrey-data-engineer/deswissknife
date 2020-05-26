@@ -2,7 +2,7 @@ import pyperclip as clp
 import time
 import sys
 from importlib import import_module
-import compare
+import f_compare
 
 if __name__ == '__main__':
     clp.copy("")
@@ -17,8 +17,9 @@ if __name__ == '__main__':
                 break
             time.sleep(0.1)
         print("Value %s has received."%(i+1))
-    if p[1]=="noid":
-        output = compare.column(p[0],p[2])
+    if len(p[1]) == 1:
+        output = f_compare.column(p[0],p[2])
     else:
-        output = compare.table(p[0],p[2],p[1])
+        output = f_compare.table(p[0],p[2],p[1])
     clp.copy(output)
+    print(output)
