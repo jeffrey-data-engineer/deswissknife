@@ -7,3 +7,7 @@ def upper(raw):
 
 def first_upper(raw):
     return str(raw).capitalize()
+
+
+def trim(raw):
+    return str(raw).replace('"','')
