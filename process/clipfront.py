@@ -18,7 +18,8 @@ if __name__ == '__main__':
             output = transform(tmp_value, para)
         else:
             output = transform(tmp_value)
-        clp.copy(output)
-        print("to value: %s" %output)
+        if output:
+            clp.copy(str(output))
+            print("to value: %s" %str(output))
     else:
         print("Usage: clipback.py <module_name>.<function_name>")
