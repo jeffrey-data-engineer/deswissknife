@@ -35,7 +35,7 @@ def common(a, b):
                 parameters[str(r)] = temp
             previous_a = i.a + i.size
             previous_b = i.b + i.size
-    return ' '.join(seqjoin(com))+"Parameter list: %s" %str(parameters.values())
+    return ' '.join(seqjoin(com)) #+"Parameter list: %s" %str(parameters.values())
 
 
 def seqjoin(seq):
