@@ -4,7 +4,7 @@ def common_longest(a, b):
     seqMatch = SequenceMatcher(None,a,b)
     match = seqMatch.find_longest_match(0, len(a), 0, len(b))
     if (match.size!=0):
-        return a[match.a:match.size]
+        return a[match.a:match.a+match.size]
     else:
         return ""
 
