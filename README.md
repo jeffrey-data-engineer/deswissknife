@@ -9,3 +9,6 @@ You may have to manually compare source and target to find the difference by you
 
 With the 'swiss knife' standing by at the backend or using it directly, you can quickly convert your data. Though it may only save a few minutes,
 it makes the boring manual work insteresting and efficient. And a few minutes every time could be a lot of time for the long run...
+
+For example:
+python clipfront.py f_transpose.to_column
